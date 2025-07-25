@@ -1,0 +1,72 @@
+'''p=1
+n=int(input())
+for i in range(1,n+1):
+    p*=i
+print(p)'''
+n=int(input())
+def fact(n):
+    if n==0 or n==1:
+        return 1
+    else:
+        return n*fact(n-1)
+print(fact(n))
+//matrix addittion
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int rows, cols;
+void disp(int m[rows][cols]);
+void disp(int m[rows][cols]){
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%d ", m[i][j]);
+        }
+        printf("\n");
+    }
+}
+int main() {
+    scanf("%d %d",&rows,&cols);
+    int m1[rows][cols],m2[rows][cols];
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d",&m1[i][j]);
+        }
+        
+    }
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            scanf("%d",&m2[i][j]);
+        }
+    }
+    int added[rows][cols];
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            added[i][j]=m1[i][j]+m2[i][j];
+        }
+    }
+    
+    printf("First Matrix:\n");
+    disp(m1);
+    printf("Second Matrix:\n");
+    disp(m2);
+    printf("Sum of the two matrices is:\n");
+    disp(added);
+     
+    return 0;
+}
+//chair
+s=input()
+av=0
+t=0
+for i in s:
+    if i=="C" or i=="U" :
+        if av==0:
+            t+=1 
+        else:
+            av-=1    
+    elif i=="R" or i=="L":
+        av+=1
+
+    
+print(t)
